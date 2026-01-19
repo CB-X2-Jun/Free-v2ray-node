@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<title>代理节点监控</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+<h1>代理节点</h1>
+<div class="filters">
+<select id="protocol" multiple></select>
+<select id="country" multiple></select>
+</div>
+</header>
+<table>
+<thead>
+<tr><th>协议</th><th>国家</th><th>地址</th><th>端口</th></tr>
+</thead>
+<tbody id="list"></tbody>
+</table>
+
+
+<div id="modal" class="modal hidden">
+<pre id="detail"></pre>
+<button id="copy">复制</button>
+<button id="close">关闭</button>
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
