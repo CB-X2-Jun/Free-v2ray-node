@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install
+      # - run: npm install
       - run: node scripts/check_nodes.js
       - run: |
           git config user.name github-actions
