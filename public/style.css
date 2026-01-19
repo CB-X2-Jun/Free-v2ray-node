@@ -1,0 +1,9 @@
+body { font-family: system-ui; background: #f6f7f9; margin: 0; }
+header { padding: 20px; background: #fff; box-shadow: 0 1px 4px #ddd; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px; border-bottom: 1px solid #eee; }
+tr:hover { background: #f0f4ff; cursor: pointer; }
+.filters select { margin-right: 10px; }
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,.4); display: flex; justify-content: center; align-items: center; }
+.modal pre { background: #fff; padding: 20px; max-width: 600px; }
+.hidden { display: none; }
