@@ -44,7 +44,10 @@ list.innerHTML = nodes.filter(n =>
 <td>${n.country}</td>
 <td>${n.host}</td>
 <td>${n.port}</td>
-<td>${formatTime(n.checkedAt)}</td>
+<td title="${new Date(n.checkedAt).toLocaleString()}">
+  ${formatTime(n.checkedAt)}
+</td>
+
 </tr>`).join('');
 }
 
