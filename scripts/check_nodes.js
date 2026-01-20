@@ -84,7 +84,7 @@ function check(host, port, timeout = 3000) {
     });
   }
 
-  fs.mkdirSync('data', { recursive: true });
+  fs.mkdirSync('public/data', { recursive: true });
   fs.writeFileSync(
     'public/data/nodes.json',
     JSON.stringify(result, null, 2)
