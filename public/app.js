@@ -26,7 +26,7 @@ function formatTime(ts) {
   const mm = String(d.getMinutes()).padStart(2, '0');
   const ss = String(d.getSeconds()).padStart(2, '0');
 
-  return `UTC ${yy}/${MM}/${dd} ${hh}:${mm}:${ss}`;
+  return `${yy}/${MM}/${dd} ${hh}:${mm}:${ss}`;
 }
 
 
