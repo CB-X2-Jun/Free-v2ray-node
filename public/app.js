@@ -1,7 +1,7 @@
 let nodes = [];
 
 
-fetch('../data/nodes.json').then(r => r.json()).then(d => {
+fetch('/data/nodes.json').then(r => r.json()).then(d => {
 nodes = d.filter(n => n.alive);
 initFilters();
 render();
