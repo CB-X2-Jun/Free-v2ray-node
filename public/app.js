@@ -42,6 +42,13 @@ modal.classList.remove('hidden');
 detail.textContent = decodeURIComponent(raw);
 }
 
+const modal = document.getElementById('modal');
+const detail = document.getElementById('detail');
+const closeBtn = document.getElementById('close');
+const copyBtn = document.getElementById('copy');
 
-close.onclick = () => modal.classList.add('hidden');
-copy.onclick = () => navigator.clipboard.writeText(detail.textContent);
+closeBtn.onclick = () => modal.classList.add('hidden');
+
+copyBtn.onclick = () => {
+  navigator.clipboard.writeText(detail.textContent);
+};
