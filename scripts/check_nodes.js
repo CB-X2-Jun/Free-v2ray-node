@@ -9,8 +9,17 @@ const raw = fs.readFileSync('node.txt', 'utf-8')
 function parse(line) {
   const protocol = line.split('://')[0];
   const nameMatch = line.match(/#(.+)/);
-  const name = nameMatch ? nameMatch[1] : '未知';
-  const country = name.replace(/\d+.*/, '');
+  const rawName = nameMatch ? nameMatch[1] : '未知';
+
+let name;
+try {
+  name = decodeURIComponent(rawName);
+} catch {
+  name = rawName;
+}
+
+const country = name.replace(/\d+.*/, '').trim();
+
 
   let host = null;
   let port = null;
