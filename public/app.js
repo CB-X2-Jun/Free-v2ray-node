@@ -15,6 +15,20 @@ protocol.innerHTML = protocols.map(p => `<option>${p}</option>`).join('');
 country.innerHTML = countries.map(c => `<option>${c}</option>`).join('');
 }
 
+function formatTime(ts) {
+  const d = new Date(ts);
+
+  const yy = String(d.getFullYear()).slice(2);
+  const MM = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+
+  const hh = String(d.getHours()).padStart(2, '0');
+  const mm = String(d.getMinutes()).padStart(2, '0');
+  const ss = String(d.getSeconds()).padStart(2, '0');
+
+  return `UTC ${yy}/${MM}/${dd} ${hh}:${mm}:${ss}`;
+}
+
 
 function render() {
 const ps = [...protocol.selectedOptions].map(o => o.value);
@@ -30,6 +44,7 @@ list.innerHTML = nodes.filter(n =>
 <td>${n.country}</td>
 <td>${n.host}</td>
 <td>${n.port}</td>
+<td>${formatTime(n.checkedAt)}</td>
 </tr>`).join('');
 }
 
