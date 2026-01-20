@@ -1,7 +1,7 @@
 let nodes = [];
 
 
-fetch('/data/nodes.json').then(r => r.json()).then(d => {
+fetch('https://cb-x2-jun.github.io/Free-v2ray-node/data/nodes.json').then(r => r.json()).then(d => {
 nodes = d.filter(n => n.alive);
 initFilters();
 render();
